@@ -2,7 +2,42 @@
 <html>
 <head>
 <title>Profile</title>
+
 <style>
+    
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  background-color: black;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 25px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: gray;
+}
+  
+  .container {
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  border: 4px solid black;
+  padding: 20px;
+  text-align: center;
+}
+
+  
 .box {
   width: 300px;
   border: 4px solid black;
@@ -26,11 +61,16 @@ img {
 </head>
 
 <body>
+  
+  <div class="navbar">
+  <a href="activities.html">My Activities</a>
+  <a href="quiz.html">Quizzes</a>
+</div>
 
-<div class="box">
+<div class="container">
   <h3>HTML</h3>
 
-  <!-- Paste Base64 image below -->
+
   <img src="pic.jpeg" alt="Profile Picture">
 
   <p>Name</p>
