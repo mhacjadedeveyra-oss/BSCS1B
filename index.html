@@ -4,175 +4,171 @@
 <title>Profile</title>
 <link rel="stylesheet" href="navbar.css">
 <style>
-    
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-    body {
-        font-family: 'Poppins', Arial, sans-serif;
-        margin: 0;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-    }
-   .navbar {
-        background-color: #1a1a2e;
-        padding: 12px 0;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-   .navbar a {
-        color: white;
-        text-decoration: none;
-        padding: 14px 25px;
-        font-weight: 600;
-        display: inline-block;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border-radius: 5px;
-        margin: 0 5px;
-    }
-   .navbar a:hover {
-        background-color: #e94560;
-        transform: translateY(-2px);
-    }
-   .back-link {
-        text-align: left;
-        margin-bottom: 15px;
-        cursor: pointer;
-        font-weight: 600;
-        color: #667eea;
-        transition: all 0.2s ease;
-    }
-   .back-link:hover {
-        text-decoration: underline;
-        color: #e94560;
-        transform: translateX(-3px);
-    }
-   .container {
-        width: 90%;
-        max-width: 450px;
-        margin: 30px auto;
-        background: white;
-        border: none;
-        border-radius: 15px;
-        padding: 30px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        animation: fadeIn 0.5s ease;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-   .box {
-        width: 300px;
-        border: 4px solid black;
-        padding: 20px;
-        text-align: center;
-    }
-    img {
-        width: 200px;
-        height: 200px;
-        border: 4px solid #667eea;
-        border-radius: 15px;
-        object-fit: cover;
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        transition: transform 0.3s ease;
-    }
-    img:hover {
-        transform: scale(1.05);
-    }
-    h2, h3 {
-        color: #1a1a2e;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-    h2 {
-        border-bottom: 3px solid violet;
-        padding-bottom: 10px;
-        display: inline-block;
-    }
-    p {
-        font-weight: 600;
-        color: #667eea;
-        margin: 15px 0 5px 0;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-   .line {
-        border-bottom: 2px solid #f0f0f0;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        color: #333;
-        font-weight: 400;
-    }
-   .content-section {
-        display: none;
-    }
-   .active {
-        display: block;
-    }
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #1a1a2e;
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    background-color: #e94560;
+    transform: translateY(-2px);
+}
+
+.back-link {
+    text-align: left;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #667eea;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #667eea;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+h2, h3 {
+    color: #1a1a2e;
+}
+
+p {
+    font-weight: 600;
+    color: #667eea;
+    margin-top: 10px;
+}
+
+.line {
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    color: #333;
+}
+
+.content-section {
+    display: none;
+}
+
+.active {
+    display: block;
+}
 </style>
 </head>
-<body>
-    <div class="navbar">
-        <a onclick="showSection('activities')">Activities</a>
-        <a onclick="showSection('quiz')">Quizzes</a>
-        <a onclick="showSection('exam')">Exam</a>
-    </div>
 
-    <div class="content-section active" id="profile">
-        <div class="container">
-            <h3>HTML</h3>
-            <img src="pic.jpeg" alt="Profile Picture">
-            <p>Name</p>
-            <div class="line">De veyra, Mhac jade L.</div>
-            <p>Course</p>
-            <div class="line">Bachelor of Science in Computer Science</div>
-            <p>Section</p>
-            <div class="line">BSCS 1-B</div>
-            <p> About me </p>
-            <div class="line"> I am Mhac Jade L. De Veyra, living in Brgy Sta. Maria, 18 years old, a simple person but with big dreams in life. </div>  
-            <p> My skills </p>
-            <div class="line"> Good at assembling computers </div>
+<body>
+
+<div class="navbar">
+    <a onclick="showSection('activities')">Activities</a>
+    <a onclick="showSection('quiz')">Quizzes</a>
+    <a onclick="showSection('exam')">Exam</a>
+</div>
+
+<!-- PROFILE -->
+<div class="content-section active" id="profile">
+    <div class="container">
+        <h3>HTML</h3>
+        <img src="pic.jpeg" alt="Profile Picture">
+
+        <p>Name</p>
+        <div class="line">De Veyra, Mhac Jade L.</div>
+
+        <p>Course</p>
+        <div class="line">Bachelor of Science in Computer Science</div>
+
+        <p>Section</p>
+        <div class="line">BSCS 1-B</div>
+
+        <p>About me</p>
+        <div class="line">
+            I am Mhac Jade L. De Veyra, 18 years old, a simple person with big dreams.
         </div>
-    </div>    
-    <div class="content-section" id="activities">
-        <div class="container">
-            <div class="back-link" onclick="showSection('profile')">< Back to Profile</div>
-            <h2>ACTIVITIES</h2>
-            <img src="cute.jpg" alt="Activities Picture">            
-        </div>
+
+        <p>My skills</p>
+        <div class="line">Good at assembling computers</div>
     </div>
-    <div class="content-section" id="quiz">
-        <div class="container">
-            <div class="back-link" onclick="showSection('profile')">< Back to Profile</div>
-            <h2>QUIZZES</h2>
-                <p>QUIZ # 1 (20/20)</p>
-            <img src="jade.jpg" alt="Quiz Picture">
-                <p>QUIZ # 2 (20/20)</p>
-            <img src="jade2.jpg" alt="Quiz Picture">
-                <p>QUIZ # 3 (15/20)</p>
-            <img src="jade1.jpg" alt="Quiz Picture">            
-        </div>
-    </div>    
-    <div class="content-section" id="exam">
-        <div class="container">
-            <div class="back-link" onclick="showSection('profile')">< Back to Profile</div>
-            <h2>EXAM</h2>
-            <img src="exam.jpg" alt="Exam Picture">
-            
-        </div>
+</div>
+
+<!-- ACTIVITIES -->
+<div class="content-section" id="activities">
+    <div class="container">
+        <div class="back-link" onclick="showSection('profile')">← Back to Profile</div>
+        <h2>ACTIVITIES</h2>
+        <img src="cute.jpg">
     </div>
+</div>
+
+<!-- QUIZ -->
+<div class="content-section" id="quiz">
+    <div class="container">
+        <div class="back-link" onclick="showSection('profile')">← Back to Profile</div>
+        <h2>QUIZZES</h2>
+
+        <p>QUIZ #1 (20/20)</p>
+        <img src="jade.jpg">
+
+        <p>QUIZ #2 (20/20)</p>
+        <img src="jade2.jpg">
+
+        <p>QUIZ #3 (15/20)</p>
+        <img src="jade1.jpg">
+    </div>
+</div>
+
+<!-- EXAM -->
+<div class="content-section" id="exam">
+    <div class="container">
+        <div class="back-link" onclick="showSection('profile')">← Back to Profile</div>
+        <h2>EXAM</h2>
+        <img src="exam.jpg">
+    </div>
+</div>
+
 <script>
-    function showSection(sectionId) {
-        let sections = document.getElementsByClassName('content-section');
-        for (let i = 0; i < sections.length; i++) {
-MJ
-sections[i].classList.remove('active');
-        }
-        document.getElementById(sectionId).classList.add('active');
+function showSection(sectionId) {
+    let sections = document.getElementsByClassName('content-section');
+
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
     }
+
+    document.getElementById(sectionId).classList.add('active');
+}
 </script>
 
 </body>
